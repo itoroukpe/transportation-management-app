@@ -11,7 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "vehicles")
-public class Vehicle {
+public class VehicleRepository {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
