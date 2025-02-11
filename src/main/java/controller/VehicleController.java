@@ -1,25 +1,27 @@
-package com.example.transportation.service;
+package com.example.transportation.controller;
 
-import com.example.transportation.model.Driver;
-import com.example.transportation.repository.DriverRepository;
-import org.springframework.stereotype.Service;
+import com.example.transportation.model.Vehicle;
+import com.example.transportation.service.VehicleService;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Service
-public class DriverService {
-    private final DriverRepository driverRepository;
+@RestController
+@RequestMapping("/vehicles")
+public class VehicleController {
+    private final VehicleService vehicleService;
 
-    public DriverService(DriverRepository driverRepository) {
-        this.driverRepository = driverRepository;
+    public VehicleController(VehicleService vehicleService) {
+        this.vehicleService = vehicleService;
     }
 
-    public List<Driver> getAllDrivers() {
-        return driverRepository.findAll();
+    @GetMapping
+    public List<Vehicle> getAllVehicles() {
+        return vehicleService.getAllVehicles();
     }
 
-    public Driver saveDriver(Driver driver) {
-        return driverRepository.save(driver);
+    @PostMapping
+    public Vehicle addVehicle(@RequestBody Vehicle vehicle) {
+        return vehicleService.saveVehicle(vehicle);
     }
 }
-
