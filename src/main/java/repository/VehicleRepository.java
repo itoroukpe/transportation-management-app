@@ -1,24 +1,9 @@
-package com.example.transportation.model;
+package com.example.transportation.repository;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.example.transportation.model.Vehicle;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import javax.persistence.*;
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Entity
-@Table(name = "vehicles")
-public class Vehicle {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    private String licensePlate;
-    private String model;
-    private String manufacturer;
-    private int year;
+@Repository
+public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
 }
-
