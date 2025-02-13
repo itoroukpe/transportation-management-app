@@ -347,7 +347,8 @@ spring.jpa.hibernate.ddl-auto=update
 
 ### **🚀 Running the Application**
 ```bash
-mvn spring-boot:run
+sudo mvn clean package
+sudo mvn spring-boot:run
 ```
 ✔ **Access REST endpoints via:**  
 - `GET http://localhost:8080/vehicles`
