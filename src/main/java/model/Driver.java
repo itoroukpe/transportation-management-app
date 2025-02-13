@@ -10,15 +10,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "vehicles")
-public class Vehicle {
+@Table(name = "drivers")
+public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private String licensePlate;
-    private String model;
-    private String manufacturer;
-    private int year;
+    private String name;
+    private String licenseNumber;
 }
-
