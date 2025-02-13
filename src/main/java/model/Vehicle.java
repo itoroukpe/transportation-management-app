@@ -12,12 +12,20 @@ import javax.persistence.*;
 @Entity
 @Table(name = "vehicles")
 public class Vehicle {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
+    @Column(name = "license_plate")
     private String licensePlate;
-    private String model;
+
+    @Column(name = "manufacturer")
     private String manufacturer;
-    private int year;
+
+    @Column(name = "model")
+    private String model;
+
+    @Column(name = "manufacture_year") // 
+    private int manufactureYear;  
 }
