@@ -333,7 +333,7 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 If you are not using an external database, and instead want an embedded database like H2, add:
 
----properties
+```properties
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.driver-class-name=org.h2.Driver
 spring.datasource.username=sa
