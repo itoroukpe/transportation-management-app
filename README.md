@@ -331,6 +331,17 @@ spring.datasource.username=postgres
 spring.datasource.password=yourpassword
 spring.jpa.hibernate.ddl-auto=update
 ```
+If you are not using an external database, and instead want an embedded database like H2, add:
+
+---properties
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.h2.console.enabled=true
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+```
 
 ---
 
